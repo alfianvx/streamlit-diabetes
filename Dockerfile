@@ -6,7 +6,6 @@ RUN apt-get install -y curl wget git
 WORKDIR /app
 
 COPY . .
-COPY requirements.txt /app/
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
