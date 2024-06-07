@@ -1,16 +1,25 @@
 FROM python:3.11-slim
 
-RUN apt-get update && apt-get install build-essential -y
-RUN apt-get install -y curl wget git
+# Install dependencies
+RUN apt-get update \
+    && apt-get install -y build-essential curl wget git \
+    && rm -rf /var/lib/apt/lists/*
 
+# Set working directory
 WORKDIR /app
 
+# Copy requirements.txt first for better caching
+COPY requirements.txt requirements.txt
+
+# Install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the application
 COPY . .
 
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
+# Expose port 8501
 EXPOSE 8501
 
-ENTRYPOINT ["streamlit", "run", "/app/stream-diabetes.py", "--server.port=8501", "--server.address=0.0.0.0"]
-
+# Set the entry point to the Streamlit app
+ENTRYPOINT ["streamlit", "run", "--server.port=8501", "--server.address=0.0.0.0", "stream-diabetes.py"]
