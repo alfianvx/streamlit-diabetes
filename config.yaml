@@ -1,0 +1,44 @@
+cookie:
+  expiry_days: 30
+  key: some_signature_key
+  name: some_cookie_name
+credentials:
+  usernames:
+    ann:
+      email: abcdefgh@gmail.com
+      failed_login_attempts: 0
+      logged_in: false
+      name: aninda
+      password: $2b$12$OfSCwLvttVe6fTrmwfX6oe.ZWVXmwcl2miJ50IyijgGD89pOmrVh2
+    gabung:
+      email: jbg@gmail.com
+      failed_login_attempts: 0
+      logged_in: false
+      name: jbg
+      password: $2b$12$HNngVnCdKfi0i.URlctRfOZUsJh37jUrzyd1GBe4YtRfjm49vy4Ky
+    jsmith:
+      email: jsmith@gmail.com
+      failed_login_attempts: 0
+      logged_in: false
+      name: John Smith
+      password: $2b$12$h4JyRMxAaXL/nT4tej4qBeIBh1KBHFQJa8RdEud7NzqghKm0Rf1.6
+    nadaaja:
+      email: ghaida@gmail.com
+      failed_login_attempts: 0
+      logged_in: false
+      name: nada
+      password: $2b$12$Amz5.Cp4zSOv.Ugf25pI8.zvl1Pd2/zuYCkakvSLiFRfuw.unzXJS
+    rbriggs:
+      email: rbriggs@gmail.com
+      failed_login_attempts: 0
+      logged_in: false
+      name: Rebecca Briggs
+      password: $2b$12$gmNEeB5IMT3QSE9B89UF3e2J0XS0Q4HPfhWcCFYCczwWzHekC0UJS
+    vinavin:
+      email: vina@gmail.com
+      logged_in: false
+      name: Vina
+      password: $2b$12$5yW.RPkhUSZXCZzDkdvQWurOqWXvh8QwkpIRdM2rtr7JZ/QmAbVWm
+pre-authorized:
+  email:
+  - melsby@gmail.com
